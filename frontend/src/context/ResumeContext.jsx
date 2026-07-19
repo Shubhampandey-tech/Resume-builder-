@@ -3,7 +3,7 @@ import { useAuth } from './AuthContext';
 
 const ResumeContext = createContext();
 
-const API_URL = 'http://localhost:5000/api/resumes';
+const API_URL = `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/resumes`;
 
 export const ResumeProvider = ({ children }) => {
   const { token } = useAuth();
